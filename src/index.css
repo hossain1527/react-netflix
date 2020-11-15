@@ -1,13 +1,122 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d2dbdb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-heading {
+  padding: 30px 0;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #868686;
+  background-color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  font-family: "Merriweather", serif;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  margin: 6%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #ffffff;
+  width: 21%;
+  border-radius: 10%;
+  float: left;
+  box-shadow: 0px 13px 10px -6px rgba(0, 0, 0, 1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 13px 18px -18px rgba(0, 0, 0, 1);
+  transform: scale(1.1, 1.1);
+}
+
+.cardImg {
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.cardInfo {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #ffffff;
+  padding: 16px 24px 24px 24px;
+}
+
+.cardCategory {
+  background-color: #fff;
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #868686;
+}
+
+.cardTitle {
+  background: #fff;
+  padding: 8px;
+  border-bottom: none;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #868686;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
+  }
+}
+
+.card {
+  animation: cardmove 6s 1;
+}
+
+@keyframes cardmove {
+  0% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 0;
+  }
+}
+
+.main-heading {
+  animation: textmove 4s 1;
+}
+
+@keyframes textmove {
+  0% {
+    letter-spacing: 3px;
+  }
+
+  30% {
+    letter-spacing: 5px;
+  }
 }
